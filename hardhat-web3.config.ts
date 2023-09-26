@@ -51,7 +51,7 @@ const config: HardhatUserConfig = {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
   typechain: {
-    outDir: "src/types",
+    outDir: "src/web3",
     target: "web3-v1",
   },
 };

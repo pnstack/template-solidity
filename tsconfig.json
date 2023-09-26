@@ -25,7 +25,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "src/**/*", "./hardhat.config.ts"],
   "exclude": ["node_modules", "dist"],
-  "files": ["./hardhat.config.ts"]
 }
