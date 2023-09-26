@@ -31,8 +31,8 @@ describe("Token contract", function () {
   //   console.log("cap",cap)
   // });
 
-  // Hiển thị địa chỉ smart contract
   it("Contract address", async () => {
     console.log("Contract address", token.address);
   });
+  
 });

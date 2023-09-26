@@ -23,10 +23,12 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 const config: HardhatUserConfig = {
   solidity: "0.8.4",
   networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
+    sepolia: {
+      url: process.env.SEPOLIA_URL || "",
       accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        process.env.SEPOLIA_PRIVATE_KEY !== undefined
+          ? [process.env.SEPOLIA_PRIVATE_KEY]
+          : [],
     },
     development: {
       url: "http://127.0.0.1:7545",
