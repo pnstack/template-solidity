@@ -1,20 +1,22 @@
 {
-  "name": "template-hardhat",
+  "name": "template-solidity",
   "version": "1.0.0",
   "scripts": {
     "clean": "npx hardhat clean",
-    "compile-tf": "npx truffle compile",
     "compile:web3": "npx hardhat --config ./hardhat-web3.config.ts compile",
     "compile": "npx hardhat compile",
-    "deploy:sepolia": "npx hardhat run --network sepolia ./scripts/deploy.ts",
     "deploy:local": "npx hardhat run --network development ./scripts/deploy.ts",
+    "deploy:sepolia": "npx hardhat run --network sepolia ./scripts/deploy.ts",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "lin:sol": "solhint 'contracts/**/*.sol' --fix",
     "reset": "docker container rm -f eth-node && yarn start",
     "start-docker": "docker run --detach --publish 8545:8545 trufflesuite/ganache-cli:latest",
     "start-local-tf": "npx ganache-cli --deterministic",
     "start-local": "npx hardhat node",
     "start": "docker run --name eth-node --detach --publish 8545:8545 trufflesuite/ganache-cli:latest",
-    "test-tf": "npx truffle test --network development",
-    "test": "npx hardhat test --network development"
+    "test": "npx hardhat test --network development",
+    "tf:compile": "npx truffle compile",
+    "tf:test": "npx truffle test --network development"
   },
   "dependencies": {
     "@ethersproject/abi": "^5.7.0",

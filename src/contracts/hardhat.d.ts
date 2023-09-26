@@ -16,25 +16,7 @@ declare module "hardhat/types/runtime" {
       name: "TodoList",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TodoList__factory>;
-    getContractFactory(
-      name: "TodoList2",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.TodoList2__factory>;
-    getContractFactory(
-      name: "TodoList",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.TodoList__factory>;
 
-    getContractAt(
-      name: "TodoList",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.TodoList>;
-    getContractAt(
-      name: "TodoList2",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.TodoList2>;
     getContractAt(
       name: "TodoList",
       address: string,
