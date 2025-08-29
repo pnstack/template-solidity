@@ -180,7 +180,7 @@ jobs:
           path: ./
 
       - name: Run Slither Analysis
-        uses: crytic/slither-action@v0.3.0
+        uses: crytic/slither-action@v0.4.1
         id: slither
         with:
           target: 'contracts/'
