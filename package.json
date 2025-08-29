@@ -49,7 +49,7 @@
     "@typechain/web3-v1": "^6.0.1",
     "bn.js": "^5.2.1",
     "hardhat-typechain": "^0.3.5",
-    "rimraf": "^5.0.4",
+    "rimraf": "^6.0.1",
     "web3": "^4.0.1",
     "web3-core": "^4.0.1",
     "web3-eth-contract": "^4.0.1"
