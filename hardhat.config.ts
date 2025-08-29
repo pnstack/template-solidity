@@ -30,6 +30,13 @@ const config: HardhatUserConfig = {
           ? [process.env.SEPOLIA_PRIVATE_KEY]
           : [],
     },
+    mainnet: {
+      url: process.env.MAINNET_URL || "",
+      accounts:
+        process.env.MAINNET_PRIVATE_KEY !== undefined
+          ? [process.env.MAINNET_PRIVATE_KEY]
+          : [],
+    },
     development: {
       url: "http://127.0.0.1:7545",
       accounts: [

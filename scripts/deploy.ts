@@ -2,13 +2,11 @@ import { TodoList__factory } from "@/index";
 import { ethers } from "hardhat";
 
 async function main() {
-
   // Log network name
   const network = await ethers.provider.getNetwork();
   console.log("Network:", network.name);
 
   const Token: TodoList__factory = await ethers.getContractFactory("TodoList");
-
 
   const token = await Token.deploy();
 

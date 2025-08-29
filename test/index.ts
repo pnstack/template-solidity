@@ -1,10 +1,6 @@
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
-import { expect } from "chai";
-import { assert } from "console";
-import { BigNumber, BigNumberish } from "ethers";
-import { BN } from "bn.js";
-
 import { ethers } from "hardhat";
+
 import { TodoList } from "@/index";
 
 describe("Token contract", function () {
@@ -13,7 +9,7 @@ describe("Token contract", function () {
 
   // Run once before all tests
   before(async function () {
-    const Token = await ethers.getContractFactory('TodoList');
+    const Token = await ethers.getContractFactory("TodoList");
     [owner] = await ethers.getSigners();
     console.log("owner", owner.address);
     token = await Token.deploy();
@@ -34,5 +30,4 @@ describe("Token contract", function () {
   it("Contract address", async () => {
     console.log("Contract address", token.address);
   });
-  
 });
