@@ -88,9 +88,6 @@ devDependencies:
   chai:
     specifier: ^4.2.0
     version: 4.3.8
-  copyfiles:
-    specifier: ^2.4.1
-    version: 2.4.1
   dotenv:
     specifier: ^10.0.0
     version: 10.0.0
@@ -3132,9 +3129,9 @@ packages:
       randombytes: 2.1.0
     dev: true
 
-  /browserify-sign@4.2.1:
-    resolution: {integrity: sha512-/vrA5fguVAKKAVTNJjgSm1tRQDHUU6DbwO9IROu/0WAzC8PKhucDSh18J0RMvVeHAn5puMd+QHC2erPRNf8lmg==}
-    requiresBuild: true
+  /browserify-sign@4.2.2:
+    resolution: {integrity: sha512-1rudGyeYY42Dk6texmv7c4VcQ0EsvVbLwZkA+AQB7SxvXxmcD93jcHie8bzecJ+ChDlmAm2Qyu0+Ccg5uhZXCg==}
+    engines: {node: '>= 4'}
     dependencies:
       bn.js: 5.2.1
       browserify-rsa: 4.1.0
@@ -3730,19 +3727,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /copyfiles@2.4.1:
-    resolution: {integrity: sha512-fereAvAvxDrQDOXybk3Qu3dPbOoKoysFMWtkY3mv5BsL8//OSZVL5DCLYqgRfY5cWirgRzlC+WSrxp6Bo3eNZg==}
-    hasBin: true
-    dependencies:
-      glob: 7.2.3
-      minimatch: 3.1.2
-      mkdirp: 1.0.4
-      noms: 0.0.0
-      through2: 2.0.5
-      untildify: 4.0.0
-      yargs: 16.2.0
-    dev: true
-
   /core-js-pure@3.32.2:
     resolution: {integrity: sha512-Y2rxThOuNywTjnX/PgA5vWM6CZ9QB9sz9oGeCixV8MqXZO70z/5SHzf9EeBrEBK0PN36DnEBBu9O/aGWzKuMZQ==}
     requiresBuild: true
@@ -3890,7 +3874,7 @@ packages:
     resolution: {integrity: sha512-fz4spIh+znjO2VjL+IdhEpRJ3YN6sMzITSBijk6FK2UvTqruSQW+/cCZTSNsMiZNvUeq0CqurF+dAbyiGOY6Wg==}
     dependencies:
       browserify-cipher: 1.0.1
-      browserify-sign: 4.2.1
+      browserify-sign: 4.2.2
       create-ecdh: 4.0.4
       create-hash: 1.2.0
       create-hmac: 1.1.7
@@ -4878,7 +4862,7 @@ packages:
     resolution: {integrity: sha512-iNZ576iTOGcfllftB73cPB5AN+XUQAT/T8xzsILsghXC1o8gJUqe3RHlcDqagu+biFpYQ61KQrZZJza8eRSYqw==}
     deprecated: Deprecated in favor of '@metamask/eth-sig-util'
     dependencies:
-      ethereumjs-abi: github.com/ethereumjs/ethereumjs-abi/ee3994657fa7a427238e6ba92a84d0b529bbcde0
+      ethereumjs-abi: git@github.com+ethereumjs/ethereumjs-abi/ee3994657fa7a427238e6ba92a84d0b529bbcde0
       ethereumjs-util: 5.2.1
     dev: true
 
@@ -7976,13 +7960,6 @@ packages:
     engines: {node: '>=12.19'}
     dev: true
 
-  /noms@0.0.0:
-    resolution: {integrity: sha512-lNDU9VJaOPxUmXcLb+HQFeUgQQPtMI24Gt6hgfuMHRJgMRHMF/qZ4HJD3GDru4sSw9IQl2jPjAYnQrdIeLbwow==}
-    dependencies:
-      inherits: 2.0.4
-      readable-stream: 1.0.34
-    dev: true
-
   /nopt@3.0.6:
     resolution: {integrity: sha512-4GUt3kSEYmk4ITxzB/b9vaIDfUVWN/Ml1Fwl11IlnIG2iaJ9O6WXZ9SrYM9NLI8OCBieN2Y8SWC2oJV0RQ7qYg==}
     hasBin: true
@@ -10586,11 +10563,6 @@ packages:
       isobject: 3.0.1
     dev: true
 
-  /untildify@4.0.0:
-    resolution: {integrity: sha512-KK8xQ1mkzZeg9inewmFVDNkg3l5LUhoq9kN6iWYB/CC9YMG8HA+c1Q8HwDe6dEX7kErrEVNVBO3fWsVq5iDgtw==}
-    engines: {node: '>=8'}
-    dev: true
-
   /upper-case-first@1.1.2:
     resolution: {integrity: sha512-wINKYvI3Db8dtjikdAqoBbZoP6Q+PZUyfMR7pmwHzjC2quzSkUq5DmPrTtPEqHaz8AGtmsB4TqwapMTM1QAQOQ==}
     dependencies:
@@ -12218,8 +12190,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  github.com/ethereumjs/ethereumjs-abi/ee3994657fa7a427238e6ba92a84d0b529bbcde0:
-    resolution: {tarball: https://codeload.github.com/ethereumjs/ethereumjs-abi/tar.gz/ee3994657fa7a427238e6ba92a84d0b529bbcde0}
+  git@github.com+ethereumjs/ethereumjs-abi/ee3994657fa7a427238e6ba92a84d0b529bbcde0:
+    resolution: {commit: ee3994657fa7a427238e6ba92a84d0b529bbcde0, repo: git@github.com:ethereumjs/ethereumjs-abi.git, type: git}
     name: ethereumjs-abi
     version: 0.6.8
     dependencies:
